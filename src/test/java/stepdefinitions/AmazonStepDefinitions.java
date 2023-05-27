@@ -97,4 +97,8 @@ public class AmazonStepDefinitions {
 
         }
     }
+
+    @Given("kullanici amazon sayfasina gider")
+    public void kullaniciAmazonSayfasinaGider() {
+    }
 }
