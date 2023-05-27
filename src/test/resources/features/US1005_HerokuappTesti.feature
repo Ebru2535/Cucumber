@@ -4,7 +4,7 @@ Feature: US1005 Kullanici butonlari test eder
 
 
   https://the-internet.herokuapp.com/add_remove_elements/ adresine gidin
-    Given Kullanici "herokuUrl" anasayfaya gider
+   Given Kullanici "herokUrl" anasayfaya gider
     Then Add Element butonuna basar
     And Delete butonu gorunur oluncaya kadar bekler
     And Delete butonunun gorunur oldugunu test eder

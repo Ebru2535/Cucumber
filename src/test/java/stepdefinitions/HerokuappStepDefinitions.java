@@ -10,6 +10,7 @@ public class HerokuappStepDefinitions {
 
     @Then("Add Element butonuna basar")
     public void add_element_butonuna_basar() {
+
         herokuPage.addElementButonu.click();
     }
 
@@ -26,6 +27,7 @@ public class HerokuappStepDefinitions {
     }
     @Then("Delete butonuna basarak butonu siler")
     public void delete_butonuna_basarak_butonu_siler() {
+
         herokuPage.deleteButonu.click();
     }
 
