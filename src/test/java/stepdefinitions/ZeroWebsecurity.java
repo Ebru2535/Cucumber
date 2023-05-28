@@ -82,6 +82,7 @@ public class ZeroWebsecurity {
         for (WebElement eachWebElement: zeroPage.dropdownList) {
             actualDrapDownStringList.add(eachWebElement.getText());
         }
+         // stringlestirmek icin getText() ni alıyorum
         System.out.println(actualDrapDownStringList.size());
         Assert.assertEquals(expectedList,actualDrapDownStringList);
     }

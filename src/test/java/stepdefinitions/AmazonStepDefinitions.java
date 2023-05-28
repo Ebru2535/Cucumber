@@ -22,14 +22,12 @@ public class AmazonStepDefinitions {
     public void nutella_icin_arama_yapar() {
         amazonPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
     }
-
     @Then("Arama sonuclarinin Nutella icerdigini test eder")
     public void arama_sonuclarinin_nutella_icerdigini_test_eder() {
         String actualAramaSonucu= amazonPage.aramaSonucuElementi.getText();
         String expectedIcerik = "Nutella";
         Assert.assertTrue(actualAramaSonucu.contains(expectedIcerik));
     }
-
     @Then("Sayfayi kapatir")
     public void sayfayi_kapatir() {
         Driver.closeDriver();
@@ -39,7 +37,6 @@ public class AmazonStepDefinitions {
     public void java_icin_arama_yapar() {
         amazonPage.aramaKutusu.sendKeys("Java" + Keys.ENTER);
     }
-
     @Then("Arama sonuclarinin Java icerdigini test eder")
     public void arama_sonuclarinin_java_icerdigini_test_eder() {
         String actualAramaSonucu= amazonPage.aramaSonucuElementi.getText();
@@ -98,7 +95,14 @@ public class AmazonStepDefinitions {
         }
     }
 
-    @Given("kullanici amazon sayfasina gider")
-    public void kullaniciAmazonSayfasinaGider() {
+    @Then("ilk urune click yapar")
+    public void ilk_urune_click_yapar() {
+        amazonPage.ilkUrunElementi.click();
+    }
+    @Then("acilan urun isminin {string} icerdigini test eder")
+    public void acilan_urun_isminin_icerdigini_test_eder(String arananKelime) {
+        String actualUrunIsmi= amazonPage.ilkUrunIsimElementi.getText();
+
+        Assert.assertTrue(actualUrunIsmi.contains(arananKelime));
     }
 }
