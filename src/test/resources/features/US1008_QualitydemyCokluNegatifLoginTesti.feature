@@ -17,3 +17,6 @@ Feature: US1008 Toplu kullanici listesi ile negatif login testi
       |asd@gmail.com|65743      |
       |klm@gmail.com|3214567    |
       |zzz@gmail.com|java12     |
+
+
+
